@@ -10,8 +10,8 @@
         vpc_subnet_id: "{{ vpc_subnet_id }}"
         group: "{{ security_group_name }}"
         instance_tags:
-          instance: "{{ name }}"
-          Name: "{{ name }}-{{ lookup('pipe','date +%D_%T_SAST') }}"
+          instance: "{{ instance_name }}"
+          Name: "{{ instance_name }}-{{ lookup('pipe','date +%D_%T_SAST') }}"
           Project: "AWX"
           Created by: "AWX Tower"
           Service: "ansible"
@@ -21,7 +21,7 @@
         exact_count: 1
         region: "{{ region }}"
         count_tag:
-          instance: "{{ name }}"
+          instance: "{{ instance_name }}"
       register: server
       async: 7200
       poll: 0

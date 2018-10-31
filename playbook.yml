@@ -33,4 +33,6 @@
       until: ec2_jobs.finished
       retries: 300
 
-
+    - name: Print server info
+      debug:
+        msg: "{{ server }}"

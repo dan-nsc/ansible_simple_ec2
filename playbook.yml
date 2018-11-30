@@ -17,6 +17,7 @@
           Created by: "AWX Tower"
           Service: "ansible"
           Team: "PAAS"
+          Awxgroup: "{{ awx_group }}"
         wait: true
         assign_public_ip: false
         exact_count: 1

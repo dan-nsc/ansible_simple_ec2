@@ -1,6 +1,7 @@
 ---
 
-- hosts: all
+- hosts: localhost
+  ansible_connection: local
   tasks:
     - name: Create ec2 instance
       ec2:
